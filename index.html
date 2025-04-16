@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1201675391356102');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1201675391356102&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #5b0eeb; /* Fondo violeta */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px; /* Espacio reducido */
+        }
+
+        .logo-whatsapp img {
+            width: 50px; /* Tamaño reducido del logo */
+            margin-right: 10px;
+        }
+
+        .logo-whatsapp span {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #25d366; /* Color verde de WhatsApp */
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 400px; /* Imagen del centro */
+            margin: 0; /* Sin margen inferior */
+        }
+
+        .extra-image img {
+            width: 100%;
+            max-width: 380px; /* Imagen adicional debajo del centro */
+            margin: 5px 0; /* Solo 1 espacio de separación */
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 5px 0; /* Espacio reducido entre subtítulo y logo */
+            color: #ffd700; /* Amarillo dorado */
+        }
+
+        .cta-button {
+            background-color: #25d366; /* Verde WhatsApp */
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            animation: pop 1.5s infinite ease-in-out; /* Animación constante */
+            margin-top: 5px; /* Espacio reducido con el subtítulo */
+        }
+
+        /* Animación de pop */
+        @keyframes pop {
+            0%, 100% {
+                transform: scale(1); /* Tamaño normal */
+            }
+            50% {
+                transform: scale(1.1); /* Crece un 10% */
+            }
+        }
+
+        .bono-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #16a34a; /* Verde de fondo */
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        footer {
+            font-size: 0.75rem;
+            color: white;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo de WhatsApp con texto al lado -->
+    <div class="logo-whatsapp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo de WhatsApp">
+        <span>WhatsApp</span>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Nueva imagen centrada -->
+        <div class="logo">
+            <img src="https://i.imgur.com/6A2edWk.png" alt="Nueva imagen central">
+        </div>
+
+        <!-- Imagen adicional debajo de la imagen principal -->
+        <div class="extra-image">
+            <img src="https://i.imgur.com/nnVmINL.png" alt="Imagen adicional recortada">
+        </div>
+
+        <!-- Subtítulo -->
+        <h2>🍀 Carg4s 2.000 y recibís 6.000</h2>
+
+        <!-- Botón de llamado a la acción con evento Contact -->
+        <a href="https://wa.link/montancas" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CLICK PARA IR A WHATSAPP</a>
+    </div>
+
+    <!-- Barra fija -->
+    <div class="bono-bar">
+        🎁 Tu usuario GRATIS y al instante 🎁
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        © Montana Online todos los derechos reservados.
+    </footer>
+</body>
+
+</html>
