@@ -25,28 +25,116 @@
     <!-- End Meta Pixel Code -->
 
     <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #5b0eeb; color: white; font-family: Arial, sans-serif;
-            display: flex; justify-content: center; align-items: center; flex-direction: column;
-            min-height: 100vh; text-align: center; padding: 20px; margin: 0;
+            background-color: #5b0eeb; /* Fondo violeta */
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
         }
-        .container { max-width: 400px; width: 100%; }
-        .logo-whatsapp { display: flex; align-items: center; justify-content: center; margin-bottom: 5px; }
-        .logo-whatsapp img { width: 50px; margin-right: 10px; }
-        .logo-whatsapp span { font-size: 1.5rem; font-weight: bold; color: #25d366; }
-        .logo img, .extra-image img { width: 100%; max-width: 400px; margin: 5px 0; }
-        h2 { font-size: 1.3rem; margin: 5px 0; color: #ffd700; }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .logo-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px; /* Espacio reducido */
+        }
+
+        .logo-whatsapp img {
+            width: 50px; /* Tamaño reducido del logo */
+            margin-right: 10px;
+        }
+
+        .logo-whatsapp span {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #25d366; /* Color verde de WhatsApp */
+        }
+
+        .logo img {
+            width: 100%; /* Ocupa todo el ancho disponible */
+            max-width: 300px; /* Límite para no expandirse demasiado */
+            height: auto; /* Mantiene la proporción */
+            margin: 0; /* Sin margen inferior */
+            object-fit: contain; /* Ajusta el contenido sin recortarlo */
+        }
+
+        .extra-image img {
+            width: 100%; /* Ocupa todo el ancho disponible */
+            max-width: 300px; /* Límite para no expandirse demasiado */
+            height: auto; /* Mantiene la proporción */
+            margin: 5px 0; /* Solo 1 espacio de separación */
+            object-fit: contain; /* Ajusta el contenido sin recortarlo */
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin: 5px 0; /* Espacio reducido entre subtítulo y logo */
+            color: #ffd700; /* Amarillo dorado */
+        }
+
         .cta-button {
-            background-color: #25d366; color: white; font-weight: bold; padding: 15px 30px; font-size: 1.2rem;
-            border: none; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer; animation: pop 1.5s infinite ease-in-out; margin-top: 5px;
+            background-color: #25d366; /* Verde WhatsApp */
+            color: white;
+            font-weight: bold;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            animation: pop 1.5s infinite ease-in-out; /* Animación constante */
+            margin-top: 5px; /* Espacio reducido con el subtítulo */
         }
-        @keyframes pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+
+        /* Animación de pop */
+        @keyframes pop {
+            0%, 100% {
+                transform: scale(1); /* Tamaño normal */
+            }
+            50% {
+                transform: scale(1.1); /* Crece un 10% */
+            }
+        }
+
         .bono-bar {
-            position: fixed; bottom: 0; left: 0; width: 100%; background-color: #16a34a;
-            color: white; text-align: center; padding: 8px; font-size: 0.9rem; font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #16a34a; /* Verde de fondo */
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
-        footer { font-size: 0.75rem; color: white; margin-top: 5px; }
+
+        footer {
+            font-size: 0.75rem;
+            color: white;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -61,29 +149,29 @@
     <div class="container">
         <!-- Nueva imagen centrada -->
         <div class="logo">
-            <img src="https://i.imgur.com/6A2edWk.webp" alt="Nueva imagen central" width="400" height="300" loading="lazy">
+            <img src="https://i.imgur.com/6A2edWk.png" alt="Nueva imagen central" width="300" height="200">
         </div>
 
         <!-- Imagen adicional debajo de la imagen principal -->
         <div class="extra-image">
-            <img src="https://i.imgur.com/nnVmINL.webp" alt="Imagen adicional recortada" width="400" height="200" loading="lazy">
+            <img src="https://i.imgur.com/nnVmINL.png" alt="Imagen adicional recortada" width="300" height="150">
         </div>
 
         <!-- Subtítulo -->
-        <h2>🍀 Carg4s al instante / Atencion 24hs🍀</h2>
+        <h2>🍀Atencion 24 horas - Los mejores Sl0ts🍀</h2>
 
         <!-- Botón de llamado a la acción con evento Contact -->
-        <a href="https://wa.link/montancas" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CLICK PARA IR A WHATSAPP</a>
+        <a href="wa.link/megabonusya" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CLICK PARA IR A WHATSAPP</a>
     </div>
 
     <!-- Barra fija -->
     <div class="bono-bar">
-        🎁 Tu usuario GRATIS y al instante 🎁
+        🎁 SUMATE HOY / TU USUARI0 GRATIS 🎁
     </div>
 
     <!-- Pie de página -->
     <footer>
-        © Montana Online todos los derechos reservados.
+        © Mega Bonus Online todos los derechos reservados.
     </footer>
 </body>
 
