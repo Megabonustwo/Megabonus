@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Bonus</title>
+    <link rel="icon" type="image/png" href="http://imgfz.com/i/gG8bTM6.jpeg" />
 
     <!-- Meta Pixel Code -->
     <script>
         !function(f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () { n.callMethod ?
             n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
-            if (!f._fbq) f._fbq = n; n.push = n;n.loaded = !0;n.version = '2.0';
+            if (!f._fbq) f._fbq = n; n.push = n;n.loaded = !0;n.version='2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
             t.src = v; s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
@@ -33,99 +34,101 @@
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <!-- Evento de contacto -->
+    <!-- Evento de Lead -->
     <script>
-        // Rastrear evento de contacto para ambos píxeles
-        fbq('track', 'Contact'); // Evento de contacto global
+        fbq('track', 'Lead'); // Evento de Lead global
     </script>
 
     <style>
-        /* General styles */
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: #5b0eeb; /* Fondo violeta */
-            color: white;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            text-align: center;
+            background-color: #ffffff;
+            color: #111b21;
+        }
+
+        header {
             padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .container {
-            max-width: 400px;
+        header img {
+            height: 40px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo-circle img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .logo-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px; /* Espacio reducido */
-        }
-
-        .logo-whatsapp img {
-            width: 50px; /* Tamaño reducido del logo */
-            margin-right: 10px;
-        }
-
-        .logo-whatsapp span {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #25d366; /* Color verde de WhatsApp */
-        }
-
-        .logo img {
-            width: 100%;
-            max-width: 400px; /* Imagen del centro agrandada */
-            margin: 0; /* Sin margen inferior */
-        }
-
-        .extra-image img {
-            width: 100%;
-            max-width: 380px; /* Imagen adicional debajo del centro */
-            margin: 5px 0; /* Solo 1 espacio de separación */
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
         }
 
         h2 {
-            font-size: 1.3rem;
-            margin: 5px 0; /* Espacio reducido entre subtítulo y logo */
-            color: #ffd700; /* Amarillo dorado */
+            color: #25d366;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .cta-box {
+            background-color: #eef6f3;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
 
         .cta-button {
-            background-color: #25d366; /* Verde WhatsApp */
+            background-color: #25d366;
             color: white;
+            padding: 14px 30px;
+            font-size: 16px;
             font-weight: bold;
-            padding: 15px 30px;
-            font-size: 1.2rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 25px;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            animation: pulse 1.5s infinite;
             cursor: pointer;
-            animation: pop 1.5s infinite ease-in-out; /* Animación constante */
-            margin-top: 5px; /* Espacio reducido con el subtítulo */
         }
 
-        /* Animación de pop */
-        @keyframes pop {
-            0%, 100% {
-                transform: scale(1); /* Tamaño normal */
-            }
-            50% {
-                transform: scale(1.1); /* Crece un 10% */
-            }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-top: 60px;
+            padding-bottom: 80px;
         }
 
         .bono-bar {
@@ -133,57 +136,58 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #16a34a; /* Verde de fondo */
+            background: linear-gradient(90deg, #16a34a, #25d366);
             color: white;
             text-align: center;
-            padding: 8px;
-            font-size: 0.9rem;
+            padding: 10px;
             font-weight: bold;
+            font-size: 14px;
+            animation: flash 2s infinite;
+            z-index: 999;
         }
 
-        footer {
-            font-size: 0.75rem;
-            color: white;
-            margin-top: 5px;
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 22px; }
+            h2 { font-size: 18px; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Logo de WhatsApp con texto al lado -->
-    <div class="logo-whatsapp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo de WhatsApp">
-        <span>WhatsApp</span>
-    </div>
+    <header>
+        <img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp" />
+    </header>
 
-    <!-- Contenedor principal -->
-    <div class="container">
-        <!-- Nueva imagen centrada -->
-        <div class="logo">
-            <img src="https://i.imgur.com/6A2edWk.png" alt="Nueva imagen central" width="300" height="200" loading="lazy">
+    <main>
+        <div class="logo-circle">
+            <img src="https://i.imgur.com/XKG32VD.png" alt="Mega Bonus" />
         </div>
 
-        <!-- Imagen adicional debajo de la imagen principal -->
-        <div class="extra-image">
-            <img src="https://i.imgur.com/nnVmINL.png" alt="Imagen adicional recortada">
+        <h1>✅ Plataforma Verificada ✅</h1>
+        <h2>Los mejores Slots las 24 horas</h2>
+
+        <div class="cta-box">
+            Te estamos conectando con nuestro equipo vía WhatsApp.
         </div>
 
-        <!-- Subtítulo -->
-        <h2>🍀Los mejores Sl0ts las 24 horas🍀</h2>
+        <a href="wa.link/megabonusya" 
+           class="cta-button" 
+           onclick="fbq('track', 'Lead');">
+           Ir a WhatsApp Ahora
+        </a>
+    </main>
 
-        <!-- Botón de llamado a la acción con evento Contact -->
-        <a href="https://wa.link/montancas" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CLICK PARA IR A WHATSAPP</a>
-    </div>
-
-    <!-- Barra fija -->
-    <div class="bono-bar">
-        🎁 Tu usuario GRATIS y al instante 🎁
-    </div>
-
-    <!-- Pie de página -->
     <footer>
-        © Megabonus todos los derechos reservados.
+        © 2025 Mega Bonus. Todos los derechos reservados.
     </footer>
+
+    <!-- Bono Activo -->
+    <div class="bono-bar">🎁 BONO ACTIVO - ¡Solicitalo ahora por WhatsApp!</div>
 </body>
 
 </html>
